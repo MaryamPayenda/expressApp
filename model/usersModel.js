@@ -12,7 +12,7 @@ const usersDataSchema = new mongoose.Schema({
   },
 
   age: {
-    type: Number,
+    type: String,
     required: [true, "Please, Enter your age"],
   },
   fwd: {
@@ -21,11 +21,16 @@ const usersDataSchema = new mongoose.Schema({
   },
   toolStack: {
     type: String,
-    required: true,
+    // required: true,
   },
   email: {
     type: String,
     required: [true, "Please Enter Your Email"],
+  },
+  userAddedDate: {
+    type: Date,
+    required: true,
+    default: Date.now,
   },
 });
 // exporting the schema and creating new collection
